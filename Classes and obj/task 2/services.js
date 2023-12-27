@@ -3,10 +3,10 @@ export let interval
 export class Timeuntil {
 
 
-    constructor(estOffset, hours, min, sec) {
+    constructor(offset, hours, min, sec) {
 
 
-        this.estOffset = Number(estOffset)
+        this.offset = Number(offset)
         this.hours = hours;
         this.min = min;
         this.sec = sec;
@@ -20,7 +20,7 @@ export class Timeuntil {
             let utcOffset = getTime.getTimezoneOffset() / 60
 
 
-            getTime.setHours(getTime.getHours() + utcOffset + this.estOffset);
+            getTime.setHours(getTime.getHours() + utcOffset + this.offset);
             // getTime.setHours()
 
             console.log("Get HOURS", getTime.getHours());
@@ -33,17 +33,9 @@ export class Timeuntil {
 
             document.getElementById(element).innerHTML = `${this.hours}:${this.min}:${this.sec}`
 
-
-
         }, 100)
         console.log("test", interval);
-
-
     }
-
-
-
-
 }
 
 
