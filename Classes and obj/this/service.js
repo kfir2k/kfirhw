@@ -5,18 +5,18 @@ export class BankAccount {
 		this.#balance = firstB
 	}
 
-	SetBalance(input) {
+	setBalance(input) {
 		this.#balance = input
 	}
-	GetBalance() {
+	getBalance() {
 		return this.#balance
 	}
 
-	Credit(amount) {
+	credit(amount) {
 		this.#balance += amount
 	}
 
-	Debit(amount) {
+	debit(amount) {
 		this.#balance -= amount
 		
 	}
