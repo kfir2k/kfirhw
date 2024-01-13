@@ -153,6 +153,7 @@ async function controller() {
 
         let myData = await getData()
         console.log(typeof (myData));
+        console.log(myData);
         display5Posts(myData)
         checkUsed = true;
     } else {
